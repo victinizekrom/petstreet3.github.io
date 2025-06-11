@@ -1,0 +1,50 @@
+/* EditarUsuario.css */
+
+.editar-usuario-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editar-usuario-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.editar-usuario-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.editar-usuario-container label {
+  font-weight: bold;
+  color: #444;
+}
+
+.editar-usuario-container input,
+.editar-usuario-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.editar-usuario-container button {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editar-usuario-container button:hover {
+  background-color: #45a049;
+}

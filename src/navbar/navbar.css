@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5fff5;
+    color: #2e4e2e;
+}
+
+/* Barra de navegação */
+.nav {
+    background-color: #68c68c;
+    color: #f5fff5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-bottom: 6px dotted #3ea368;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Patinhas decorativas no fundo */
+.nav::before,
+.nav::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #d9f7e0;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.nav::before {
+    top: 10px;
+    left: 20px;
+    box-shadow:
+        15px -10px #d9f7e0,
+        30px 5px #d9f7e0,
+        10px 20px #d9f7e0,
+        25px 25px #d9f7e0;
+}
+
+.nav::after {
+    bottom: 10px;
+    right: 20px;
+    box-shadow:
+        15px -10px #d9f7e0,
+        30px 5px #d9f7e0,
+        10px 20px #d9f7e0,
+        25px 25px #d9f7e0;
+}
+
+/* Lista de navegação */
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Links */
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem 0.5rem 2.2rem; /* espaço para a patinha */
+    border-radius: 10px;
+    position: relative;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Patinha antes do link */
+.nav a::before {
+    content: "🐾";
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+/* Efeito hover */
+.nav a:hover {
+    background-color: #c4f0d6;
+    color: #1f5e38;
+    transform: scale(1.05);
+}

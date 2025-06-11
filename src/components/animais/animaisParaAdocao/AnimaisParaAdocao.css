@@ -1,0 +1,123 @@
+/* Contêiner principal */
+.animais-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9fff9;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Título com detalhe de patinha */
+.animais-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3a754e;
+  position: relative;
+}
+
+.animais-container h2::after {
+  content: "🐾";
+  position: absolute;
+  right: -2rem;
+  top: 0;
+  font-size: 2rem;
+}
+
+/* Lista de cards */
+.lista-animais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Card de cada animal */
+.card-animal {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-animal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Coração no canto do card */
+.card-animal::after {
+  content: "❤️";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.2rem;
+}
+
+/* Foto do animal */
+.foto-animal {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  border: 3px solid #c6efd2;
+}
+
+/* Nome do animal */
+.card-animal h3 {
+  font-size: 1.5rem;
+  color: #2e5f3e;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.card-animal h3::before {
+  content: "🐶";
+  margin-right: 0.5rem;
+}
+
+/* Detalhes */
+.card-animal p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+/* Destaque nos labels */
+.card-animal p strong {
+  color: #3a754e;
+}
+
+/* Mensagem quando não há animais */
+.animais-container p {
+  font-size: 1.2rem;
+  color: #888;
+  padding: 2rem 0;
+}
+
+/* Elementos decorativos no fundo */
+.animais-container::before,
+.animais-container::after {
+  content: "🐾";
+  font-size: 5rem;
+  color: #e3f9e7;
+  position: absolute;
+  z-index: 0;
+}
+
+.animais-container::before {
+  top: -20px;
+  left: -10px;
+}
+
+.animais-container::after {
+  bottom: -20px;
+  right: -10px;
+}

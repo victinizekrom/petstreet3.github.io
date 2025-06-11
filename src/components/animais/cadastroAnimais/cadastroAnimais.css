@@ -1,0 +1,102 @@
+/* Container do formulário */
+.container {
+  height: 100px;
+}
+
+/* Estilo geral do form */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f0fff5;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Título com emoji de patinha */
+form h1 {
+  font-size: 2.2rem;
+  color: #2e5f3e;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+form h1::after {
+  content: " 🐾";
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+}
+
+/* Inputs gerais */
+form input[type="text"],
+form input[type="number"],
+form input[type="file"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  border: 2px solid #b5e1c9;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus {
+  border-color: #68c68c;
+  box-shadow: 0 0 5px rgba(104, 198, 140, 0.5);
+  outline: none;
+}
+
+/* Botão principal */
+form button {
+  margin-top: 1.5rem;
+  background-color: #68c68c;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #3ea368;
+  transform: scale(1.05);
+}
+
+/* Imagem de prévia */
+form img {
+  margin-top: 1rem;
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px dashed #68c68c;
+}
+
+/* Ícones de decoração */
+form::before,
+form::after {
+  content: "🐶";
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.07;
+  z-index: 0;
+}
+
+form::before {
+  top: 10px;
+  left: 20px;
+}
+
+form::after {
+  bottom: 10px;
+  right: 20px;
+}
